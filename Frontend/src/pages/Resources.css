@@ -1,0 +1,553 @@
+.resources-page {
+  max-width: 1500px;
+  margin: auto;
+  padding: 30px 34px 45px;
+}
+
+/* HEADER */
+
+.resources-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 22px;
+}
+
+.resources-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #667085;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.resources-eyebrow span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #16a36d;
+}
+
+.resources-header h1 {
+  margin: 7px 0 0;
+  color: #172033;
+  font-size: 35px;
+  font-weight: 800;
+}
+
+.resources-header p {
+  margin: 6px 0 0;
+  color: #667085;
+  font-size: 13px;
+}
+
+.add-resource-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #172033;
+  color: white;
+  font-size: 9px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+
+/* SUMMARY */
+
+.resource-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.summary-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  background: white;
+  border: 1px solid #e5e9f0;
+  border-radius: 11px;
+}
+
+.summary-number {
+  color: #635bff;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.summary-card strong {
+  display: block;
+  color: #344054;
+  font-size: 9px;
+}
+
+.summary-card span {
+  display: block;
+  margin-top: 3px;
+  color: #98a2b3;
+  font-size: 7px;
+}
+
+.warning-summary .summary-number {
+  color: #d97706;
+}
+
+
+/* TOOLBAR */
+
+.resources-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 13px;
+}
+
+.resources-toolbar h2 {
+  margin: 0;
+  color: #172033;
+  font-size: 15px;
+}
+
+.resources-toolbar p {
+  margin: 4px 0 0;
+  color: #98a2b3;
+  font-size: 8px;
+}
+
+.resources-toolbar select {
+  padding: 8px 12px;
+  border: 1px solid #dfe4eb;
+  border-radius: 7px;
+  outline: none;
+  color: #667085;
+  background: white;
+  font-size: 8px;
+}
+
+
+/* GRID */
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 13px;
+}
+
+.resource-card {
+  padding: 16px;
+  background: white;
+  border: 1px solid #e5e9f0;
+  border-radius: 12px;
+}
+
+.resource-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.resource-main-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+}
+
+.resource-main-icon.medical {
+  color: #dc2626;
+  background: #fff1f2;
+}
+
+.resource-main-icon.supplies {
+  color: #635bff;
+  background: #eef0ff;
+}
+
+.resource-main-icon.shelter {
+  color: #16855b;
+  background: #ecfdf3;
+}
+
+.resource-main-icon.water {
+  color: #1677b8;
+  background: #eff8ff;
+}
+
+.resource-main-icon.food {
+  color: #b54708;
+  background: #fff7ed;
+}
+
+.resource-main-icon.communication {
+  color: #6941c6;
+  background: #f4f3ff;
+}
+
+
+/* STATUS */
+
+.resource-status {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 7px;
+  border-radius: 12px;
+  font-size: 7px;
+  font-weight: 700;
+}
+
+.resource-status.available {
+  color: #16855b;
+  background: #ecfdf3;
+}
+
+.resource-status.low {
+  color: #b54708;
+  background: #fff7ed;
+}
+
+
+/* TITLE */
+
+.resource-title {
+  margin-top: 13px;
+}
+
+.resource-title h3 {
+  margin: 0;
+  color: #344054;
+  font-size: 12px;
+}
+
+.resource-title span {
+  display: block;
+  margin-top: 3px;
+  color: #98a2b3;
+  font-size: 7px;
+}
+
+
+/* NUMBERS */
+
+.resource-numbers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 17px 0;
+  padding: 11px 0;
+  border-top: 1px solid #edf0f4;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.resource-numbers div {
+  text-align: center;
+  border-right: 1px solid #edf0f4;
+}
+
+.resource-numbers div:last-child {
+  border-right: none;
+}
+
+.resource-numbers strong {
+  display: block;
+  color: #344054;
+  font-size: 13px;
+}
+
+.resource-numbers span {
+  display: block;
+  margin-top: 3px;
+  color: #98a2b3;
+  font-size: 6px;
+}
+
+
+/* PROGRESS */
+
+.resource-progress {
+  margin-bottom: 13px;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.progress-label span,
+.progress-label strong {
+  color: #667085;
+  font-size: 7px;
+}
+
+.progress-track {
+  height: 5px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #edf0f4;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  background: #635bff;
+}
+
+.progress-fill.low-fill {
+  background: #d97706;
+}
+
+
+/* LOCATION */
+
+.resource-location {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #98a2b3;
+  font-size: 7px;
+}
+
+
+/* ACTIONS */
+
+.resource-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+  margin-top: 13px;
+}
+
+.resource-actions button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 8px;
+  border: 1px solid #e5e9f0;
+  border-radius: 6px;
+  background: white;
+  color: #667085;
+  font-size: 7px;
+  cursor: pointer;
+}
+
+.resource-actions button:last-child {
+  border-color: #635bff;
+  color: #635bff;
+}
+
+
+/* ALERT */
+
+.resource-alert {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-top: 18px;
+  padding: 14px;
+  border: 1px solid #fedf89;
+  border-radius: 10px;
+  background: #fffcf5;
+}
+
+.resource-alert-icon {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #b54708;
+  background: #fff3d6;
+  border-radius: 8px;
+}
+
+.resource-alert-content {
+  flex: 1;
+}
+
+.resource-alert-content strong {
+  color: #7a2e0b;
+  font-size: 9px;
+}
+
+.resource-alert-content p {
+  margin: 4px 0 0;
+  color: #986c4c;
+  font-size: 7px;
+}
+
+.resource-alert button {
+  padding: 8px 11px;
+  border: 1px solid #f4c86a;
+  border-radius: 6px;
+  background: white;
+  color: #9a6700;
+  font-size: 7px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .resource-summary {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .resources-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .resources-page {
+    padding: 20px;
+  }
+
+  .resources-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .resource-summary,
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resources-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .resource-alert {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+/* ================= HEADER ================= */
+
+.resources-eyebrow {
+  font-size: 11px;
+}
+
+.resources-header h1 {
+  font-size: 35px;
+}
+
+.resources-header p {
+  font-size: 15px;
+}
+
+.add-resource-btn {
+  font-size: 13px;
+}
+
+
+/* ================= SUMMARY ================= */
+
+.summary-number {
+  font-size: 22px;
+}
+
+.summary-card strong {
+  font-size: 12px;
+}
+
+.summary-card span {
+  font-size: 10px;
+}
+
+
+/* ================= TOOLBAR ================= */
+
+.resources-toolbar h2 {
+  font-size: 18px;
+}
+
+.resources-toolbar p {
+  font-size: 12px;
+}
+
+.resources-toolbar select {
+  font-size: 12px;
+}
+
+
+/* ================= RESOURCE CARD ================= */
+
+.resource-status {
+  font-size: 10px;
+}
+
+
+/* TITLE */
+
+.resource-title h3 {
+  font-size: 14px;
+}
+
+.resource-title span {
+  font-size: 11px;
+}
+
+
+/* ================= NUMBERS ================= */
+
+.resource-numbers strong {
+  font-size: 15px;
+}
+
+.resource-numbers span {
+  font-size: 10px;
+}
+
+
+/* ================= PROGRESS ================= */
+
+.progress-label span,
+.progress-label strong {
+  font-size: 11px;
+}
+
+
+/* ================= LOCATION ================= */
+
+.resource-location {
+  font-size: 11px;
+}
+
+
+/* ================= ACTIONS ================= */
+
+.resource-actions button {
+  font-size: 11px;
+}
+
+
+/* ================= ALERT ================= */
+
+.resource-alert-content strong {
+  font-size: 12px;
+}
+
+.resource-alert-content p {
+  font-size: 11px;
+}
+
+.resource-alert button {
+  font-size: 11px;
+}

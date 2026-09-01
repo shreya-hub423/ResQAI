@@ -1,304 +1,484 @@
-ResQAI — AI Disaster Response Copilot
-<p align="center"> <img src="docs/resqai-cover.png" alt="ResQAI — AI Disaster Response Copilot" width="100%"> </p>
+# 🚨 ResQAI — AI Disaster Response Copilot
 
-<p align="center"><b>From Disaster Data to Life-Saving Decisions — in Seconds.</b></p> <p align="center"><i>Build with Bharat 2.0 • National Level Hackathon</i></p>
+<p align="center">
+  <img src="docs/resqai-cover.png" alt="ResQAI — AI Disaster Response Copilot" width="100%">
+</p>
 
-🚨 Overview
-ResQAI (AI Disaster Response Copilot) is a human-in-the-loop disaster intelligence platform designed to transform fragmented disaster information into fast, explainable and actionable decisions for emergency responders.
+<p align="center">
+  <b>From Disaster Data to Life-Saving Decisions — in Seconds.</b>
+</p>
 
-ResQAI brings together satellite imagery, weather, GIS/maps, citizen reports, government alerts, infrastructure information and field updates, then applies AI, computer vision, geospatial intelligence, risk scoring and natural-language interaction to create a unified operational picture.
+<p align="center">
+  <b>Build with भारत 2.0 • National Level Hackathon</b>
+</p>
 
-Core idea: ResQAI does not replace emergency responders. It acts as an intelligent second brain that helps them understand the situation, prioritize risks and coordinate action.
+---
 
-🎯 Problem
-During disasters, responders face an information and coordination crisis:
+## 🌍 What is ResQAI?
 
-Critical information is distributed across multiple sources.
+**ResQAI** is an AI-powered disaster-response decision-support platform designed to help emergency responders understand rapidly changing situations and turn scattered information into **prioritized, explainable and actionable response intelligence**.
 
-Conditions change rapidly while response teams work under severe time pressure.
+Instead of giving responders another dashboard or another chatbot, ResQAI brings together:
 
-Manual analysis can delay prioritization.
+**🛰️ Satellite Data + 🌦️ Weather + 🗺️ GIS + 📱 Citizen Reports + 🚨 Alerts + 👨‍🚒 Field Information**
 
-Citizen reports may be incomplete, duplicated or unreliable.
+and converts them into:
 
-The safest rescue route may not be the shortest route.
+> **SEE → UNDERSTAND → PRIORITIZE → ACT**
 
-Limited rescue teams, ambulances, shelters and supplies must be allocated intelligently.
+ResQAI is designed as a **human-in-the-loop system**: AI analyzes information and recommends actions, while authorized responders remain in control of critical decisions.
 
-Responders need to understand why a zone or incident has been prioritized.
+---
 
-The real gap
-The problem is not a lack of data — it is the inability to convert scattered data into timely, actionable decisions.
+# 🚨 The Problem
 
-💡 Solution
-ResQAI follows an end-to-end pipeline:
+When a disaster strikes, information comes from everywhere.
 
-OBSERVE → UNDERSTAND → PRIORITIZE → RECOMMEND → COORDINATE → LEARN
+* Satellite imagery
+* Weather systems
+* Maps and GIS
+* Emergency reports
+* Citizen inputs
+* Government alerts
+* Hospitals and shelters
+* Field response teams
 
-Observe
-Collect multimodal information from satellite imagery, weather, maps, citizen reports, government alerts, infrastructure and field teams.
+The challenge is not simply the absence of data.
 
-Understand
-Use computer vision, geospatial analysis, change/damage detection, exposure analysis and domain knowledge to interpret the situation.
+### The real challenge is:
 
-Prioritize
-Generate a dynamic 0–100 disaster priority/risk score using factors such as hazard severity, population exposure, infrastructure vulnerability, accessibility, weather and verified reports.
+> **Too much fragmented information + too little time + difficult prioritization.**
 
-Recommend
-Provide high-priority zones, rescue recommendations, safer routes, shelter suggestions, resource-allocation recommendations and targeted alerts.
+Responders need quick answers to questions like:
 
-Coordinate
-Support command-center, field-responder, citizen and agency workflows.
+> **Which area should we rescue first?**
 
-Learn
-Use verified field updates and operational outcomes for monitoring and continuous improvement.
+> **Where is the highest risk?**
 
-🧠 Key Features
-Feature	Purpose
-🤖 AI Disaster Copilot	Natural-language interface for disaster intelligence and recommendations
-🛰️ Satellite Damage Intelligence	Supports before/after imagery analysis and affected-area detection
-🚨 Dynamic Risk Scoring	Ranks zones using a multi-factor 0–100 score
-🛣️ Intelligent Rescue Routing	Considers safety, accessibility and travel time
-👥 AI-Assisted Triage	Extracts urgency, location and severity from incident reports
-📦 Resource Optimization	Helps prioritize teams, ambulances, supplies and shelters
-🗺️ Geospatial Command Center	Provides a unified operational map
-🔎 Explainable Recommendations	Shows the factors behind AI recommendations
-👨‍🚒 Human-in-the-Loop	Keeps authorized responders in control of critical decisions
-📡 Low-Connectivity Readiness	Supports cached/queued field workflows where connectivity is limited
-🏗️ System Architecture
-┌───────────────────────────────────────────────────────────┐
-│                    MULTIMODAL DATA                        │
-│ Satellite • Weather • GIS • Citizen • Government • Field │
-└───────────────────────────┬───────────────────────────────┘
-                            │
-                            ▼
-┌───────────────────────────────────────────────────────────┐
-│                 DATA INGESTION & STORAGE                  │
-│ FastAPI • ETL • Validation • PostgreSQL • PostGIS        │
-└───────────────────────────┬───────────────────────────────┘
-                            │
-                            ▼
-┌───────────────────────────────────────────────────────────┐
-│                 INTELLIGENCE LAYER                        │
-│ Computer Vision • Geospatial AI • Risk Engine             │
-│ RAG / Knowledge • LLM Copilot • Analytics                 │
-└───────────────────────────┬───────────────────────────────┘
-                            │
-                            ▼
-┌───────────────────────────────────────────────────────────┐
-│                 DECISION SUPPORT                          │
-│ Priority Zones • Routing • Shelters • Resource Planning  │
-│ Alerts • Triage • Explainable Recommendations             │
-└───────────────────────────┬───────────────────────────────┘
-                            │
-                            ▼
-┌───────────────────────────────────────────────────────────┐
-│                 RESPONSE INTERFACES                       │
-│ Command Center • Responder App • Citizen Interface       │
-└───────────────────────────┬───────────────────────────────┘
-                            │
-                            ▼
-                 ┌──────────────────────┐
-                 │ FEEDBACK & MONITORING│
-                 │ Verify • Measure •  │
-                 │ Improve             │
-                 └──────────────────────┘
-🛠️ Technology Stack
-Frontend
-React
+> **Which route is safest?**
 
-TypeScript
+> **Which shelter should receive evacuees?**
 
-Vite
+> **Where should limited emergency resources be deployed?**
 
-Tailwind CSS
+ResQAI is designed to help answer these questions from one operational interface.
 
-Leaflet / MapLibre
+---
 
-Recharts
+# 💡 Our Solution
 
-Backend
-Python
+ResQAI follows a six-stage intelligence workflow:
 
-FastAPI
+```text
+        ┌───────────────┐
+        │    OBSERVE    │
+        │ Collect Data  │
+        └───────┬───────┘
+                ↓
+        ┌───────────────┐
+        │  UNDERSTAND   │
+        │   AI Analysis │
+        └───────┬───────┘
+                ↓
+        ┌───────────────┐
+        │  PRIORITIZE   │
+        │   Risk Score  │
+        └───────┬───────┘
+                ↓
+        ┌───────────────┐
+        │  RECOMMEND    │
+        │ Routes / Help  │
+        └───────┬───────┘
+                ↓
+        ┌───────────────┐
+        │  COORDINATE   │
+        │ Response Teams│
+        └───────┬───────┘
+                ↓
+        ┌───────────────┐
+        │     LEARN     │
+        │ Field Feedback│
+        └───────────────┘
+```
 
-Pydantic
+---
 
-Uvicorn
+# 🧠 Core Features
 
-AI / ML
-PyTorch
+### 🤖 AI Disaster Copilot
 
-Hugging Face Transformers
+Responders can interact with the system using natural language.
 
-Computer Vision
+Example:
 
-LLM
+```text
+"Show me the highest-risk flood zones."
 
-Retrieval-Augmented Generation (RAG)
+"Which area should we prioritize?"
 
-scikit-learn
+"Find a safer route for Rescue Team Alpha."
 
-Geospatial
-PostgreSQL
+"Why is Zone A marked critical?"
 
-PostGIS
+"Which nearby shelter has available capacity?"
+```
 
-GeoPandas
+---
 
-Rasterio
+### 🛰️ Satellite Damage Intelligence
 
-Shapely
+Analyze before/after imagery to support identification of:
 
-GDAL
+* Flood-affected areas
+* Infrastructure changes
+* Damaged regions
+* Road disruption
+* Potential landslide zones
 
-OpenStreetMap
+---
 
-Infrastructure
-Docker
+### 🚨 Dynamic Risk Scoring
 
-Git / GitHub
+ResQAI can rank affected zones using a conceptual **0–100 priority score**.
 
-Cloud deployment
+Potential factors include:
 
-REST APIs
-
-🔄 Example: Flood Emergency
-Weather Forecast
+```text
+Hazard Severity
        +
-Satellite Imagery
+Population Exposure
        +
-Road / GIS Data
+Infrastructure Vulnerability
        +
-Citizen Reports
+Accessibility
        +
-Field Reports
-       ↓
-   ResQAI Engine
-       ↓
-Risk + Impact Analysis
-       ↓
-Priority Zones
-       ↓
-Rescue + Route + Shelter Recommendations
-Example Copilot interaction
-Responder: Which area should we prioritize first?
+Weather Conditions
+       +
+Verified Incident Reports
+```
 
-ResQAI: Zone A has the highest current priority based on hazard severity, estimated population exposure, accessibility constraints and verified incident reports.
+Example:
 
-Responder: Which route should Rescue Team Alpha use?
+| Zone   |   Priority | Status      |
+| ------ | ---------: | ----------- |
+| Zone A | **94/100** | 🔴 Critical |
+| Zone B | **81/100** | 🟠 High     |
+| Zone C | **63/100** | 🟡 Moderate |
+| Zone D | **31/100** | 🟢 Low      |
 
-ResQAI: Route C is recommended because it avoids reported blocked segments and high-risk areas while maintaining an acceptable travel time.
+The score should also explain **why** a zone received its priority.
 
-Critical recommendations remain subject to responder verification and operational authority.
+---
 
-🔐 Safety & Trust
-Disaster AI must be designed for reliability, not simply convincing text generation.
+### 🛣️ Intelligent Rescue Routing
 
+> **Shortest route ≠ safest route**
+
+ResQAI can consider:
+
+* Distance
+* Travel time
+* Road accessibility
+* Blocked roads
+* Disaster-risk zones
+* Bridges
+* Field reports
+
+The goal is:
+
+### **SAFE + FAST + ACCESSIBLE**
+
+---
+
+### 👥 AI-Assisted Incident Triage
+
+Example citizen report:
+
+> *"Water has entered our house. Elderly people are trapped."*
+
+AI can extract:
+
+```text
+Location       → Identified
+Disaster       → Flood
+Severity       → High
+Vulnerability  → Elderly persons
+Urgency        → Immediate
+```
+
+The system can then flag the incident for responder verification.
+
+---
+
+### 📦 Resource Intelligence
+
+Help responders visualize and prioritize:
+
+* 🚑 Ambulances
+* 👨‍🚒 Rescue teams
+* 🏠 Shelters
+* 💧 Water supplies
+* 🍱 Food supplies
+* 🧰 Emergency equipment
+
+---
+
+### 🔎 Explainable Recommendations
+
+ResQAI should not simply say:
+
+> **"Zone A is critical."**
+
+It should explain:
+
+> **WHY?**
+
+For example:
+
+```text
+ZONE A — 94/100
+
+✓ Severe flooding
+✓ High population exposure
+✓ Multiple blocked roads
+✓ Limited accessibility
+✓ Verified emergency reports
+```
+
+---
+
+# 🗺️ Ask the Disaster Map
+
+One of ResQAI's signature concepts is natural-language interaction with geospatial information.
+
+### Responder:
+
+> **"Show me the 5 highest-risk flood zones within 10 km."**
+
+### ResQAI:
+
+```text
+1. Zone A — 94
+2. Zone B — 88
+3. Zone C — 81
+4. Zone D — 76
+5. Zone E — 71
+```
+
+The map then visualizes the priority areas.
+
+This transforms complicated spatial analysis into a simple conversational workflow.
+
+---
+
+# 🏗️ System Architecture
+
+```text
+┌──────────────────────────────────────────────────┐
+│                 DATA SOURCES                     │
+│                                                  │
+│ Satellite │ Weather │ GIS │ Citizens │ Agencies │
+│                 │ Field Reports                  │
+└───────────────────────┬──────────────────────────┘
+                        ↓
+┌──────────────────────────────────────────────────┐
+│              DATA INGESTION LAYER                │
+│                                                  │
+│       FastAPI │ ETL │ Validation │ APIs         │
+└───────────────────────┬──────────────────────────┘
+                        ↓
+┌──────────────────────────────────────────────────┐
+│             DATA & GEO LAYER                     │
+│                                                  │
+│        PostgreSQL + PostGIS + Geospatial Data   │
+└───────────────────────┬──────────────────────────┘
+                        ↓
+┌──────────────────────────────────────────────────┐
+│             AI INTELLIGENCE LAYER                │
+│                                                  │
+│ Computer Vision │ Risk Engine │ RAG │ LLM       │
+│ Geospatial AI   │ Analytics                      │
+└───────────────────────┬──────────────────────────┘
+                        ↓
+┌──────────────────────────────────────────────────┐
+│              DECISION SUPPORT                    │
+│                                                  │
+│ Risk Zones │ Triage │ Routing │ Shelters        │
+│ Resource Allocation │ Alerts                     │
+└───────────────────────┬──────────────────────────┘
+                        ↓
+┌──────────────────────────────────────────────────┐
+│             RESPONSE INTERFACES                  │
+│                                                  │
+│ Command Center │ Responder Interface │ Citizen  │
+└───────────────────────┬──────────────────────────┘
+                        ↓
+                FIELD FEEDBACK
+                        ↓
+                CONTINUOUS UPDATE
+```
+
+---
+
+# 🛠️ Technology Stack
+
+## Frontend
+
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+* Leaflet / MapLibre
+* Recharts
+
+## Backend
+
+* Python
+* FastAPI
+* Pydantic
+* Uvicorn
+
+## AI / ML
+
+* PyTorch
+* Hugging Face Transformers
+* Computer Vision
+* LLM
+* RAG
+* scikit-learn
+
+## Geospatial
+
+* PostgreSQL
+* PostGIS
+* GeoPandas
+* Rasterio
+* Shapely
+* GDAL
+* OpenStreetMap
+
+## Development
+
+* Git
+* GitHub
+* Docker
+* REST APIs
+
+---
+
+# 🔐 Human-in-the-Loop Safety
+
+ResQAI is designed around:
+
+```text
 AI ANALYZES
      ↓
 AI RECOMMENDS
      ↓
-RESPONDER VERIFIES
+HUMAN VERIFIES
      ↓
 AUTHORIZED ACTION
      ↓
 FIELD FEEDBACK
-Trust mechanisms
-Source-aware information
+```
 
-Confidence scores
+This is especially important because disaster-response decisions can be safety-critical.
 
-Explainable recommendations
+Potential trust mechanisms include:
 
-Data validation
+* Explainable recommendations
+* Confidence scores
+* Source-aware responses
+* Data validation
+* Audit logs
+* Role-based access
+* Human approval
+* Fail-safe behavior
 
-Duplicate-report handling
+> **ResQAI assists responders — it does not replace them.**
 
-Human verification
+---
 
-Audit trails
+# 🎯 Hackathon MVP
 
-Role-based access
+For the initial prototype, ResQAI focuses on a:
 
-Fail-safe behavior
+## 🌊 Flood Emergency Command Center
 
-AI recommends. Humans remain accountable for critical decisions.
+The MVP can demonstrate:
 
-📊 Competitive Advantage
-Capability	Traditional Dashboard	Basic Chatbot	ResQAI
-Disaster map	✅	❌	✅
-Multimodal data	⚠️	⚠️	✅
-Natural-language interaction	❌	✅	✅
-Satellite intelligence	⚠️	❌	✅
-Dynamic risk scoring	⚠️	❌	✅
-Risk-aware routing	⚠️	❌	✅
-AI triage	❌	⚠️	✅
-Resource recommendations	⚠️	⚠️	✅
-Explainable decisions	⚠️	⚠️	✅
-Human-in-the-loop	✅	⚠️	✅
-🚀 MVP Scope
-For the hackathon prototype, the recommended focus is a Flood Emergency Command Center.
-
-MVP modules
-Interactive disaster map
-
-Risk heatmap
-
+```text
+Interactive Map
+       ↓
+Flood-Affected Zones
+       ↓
+Risk Heatmap
+       ↓
 AI Copilot
+       ↓
+Incident Prioritization
+       ↓
+Safe Route Recommendation
+       ↓
+Shelter Recommendation
+       ↓
+Resource Planning
+       ↓
+Human Verification
+```
 
-Citizen incident feed
+### Example Demo
 
-Satellite/affected-area visualization
+**Responder:**
 
-Rescue route recommendation
+> "Where should I send the first rescue team?"
 
-Shelter information
+**ResQAI:**
 
-Resource dashboard
+> **Zone A — Priority 94/100.**
+> High hazard severity, significant population exposure, limited accessibility and multiple verified emergency reports make it the current highest-priority zone.
 
-Explainability panel
+---
 
-Demo story
-Select a flood scenario.
+# ⚡ Why ResQAI?
 
-Load disaster data.
+| Capability             | Traditional Dashboard | Basic Chatbot | **ResQAI** |
+| ---------------------- | :-------------------: | :-----------: | :--------: |
+| Disaster Map           |           ✅           |       ❌       |      ✅     |
+| Multimodal Data        |           ⚠️          |       ⚠️      |      ✅     |
+| Satellite Intelligence |           ⚠️          |       ❌       |      ✅     |
+| Natural Language       |           ❌           |       ✅       |      ✅     |
+| Risk Scoring           |           ⚠️          |       ❌       |      ✅     |
+| Rescue Routing         |           ⚠️          |       ❌       |      ✅     |
+| Incident Triage        |           ❌           |       ⚠️      |      ✅     |
+| Resource Intelligence  |           ⚠️          |       ⚠️      |      ✅     |
+| Explainability         |           ⚠️          |       ⚠️      |      ✅     |
+| Human-in-the-Loop      |           ✅           |       ⚠️      |      ✅     |
 
-Display affected zones.
+### Our USP
 
-Calculate risk scores.
+> **Not another dashboard. Not another chatbot. A disaster-response decision-support copilot.**
 
-Ask the AI Copilot a question.
+---
 
-Generate a priority recommendation.
+# 📁 Project Structure
 
-Find a safer rescue route.
-
-Recommend a shelter.
-
-Show resource requirements.
-
-Demonstrate human verification.
-
-📁 Suggested Repository Structure
+```text
 ResQAI/
 │
 ├── frontend/
 │   ├── src/
 │   ├── public/
-│   ├── package.json
-│   └── vite.config.ts
+│   └── package.json
 │
 ├── backend/
 │   ├── app/
 │   │   ├── api/
+│   │   ├── ai/
 │   │   ├── models/
 │   │   ├── services/
-│   │   ├── ai/
-│   │   ├── geospatial/
 │   │   └── main.py
-│   ├── requirements.txt
-│   └── .env.example
+│   └── requirements.txt
 │
 ├── ml/
 │   ├── models/
@@ -306,125 +486,223 @@ ResQAI/
 │   └── inference/
 │
 ├── data/
-│   ├── sample/
-│   └── schemas/
 │
 ├── docs/
 │   └── resqai-cover.png
 │
 ├── tests/
-├── docker-compose.yml
+│
+├── .gitignore
 ├── README.md
-├── LICENSE
-└── .gitignore
-⚙️ Local Development
-Prerequisites
-Python 3.11+
+└── docker-compose.yml
+```
 
-Node.js 20+
+---
 
-Git
+# 🚀 Getting Started
 
-PostgreSQL/PostGIS
+## 1. Clone the repository
 
-Docker Desktop (recommended)
-
-Clone
+```bash
 git clone https://github.com/shreya-hub423/ResQAI.git
 cd ResQAI
-Backend
+```
+
+## 2. Backend
+
+```bash
 cd backend
+
 python -m venv .venv
-Windows PowerShell:
+```
 
+### Windows
+
+```powershell
 .venv\Scripts\activate
+```
+
+Install dependencies:
+
+```bash
 pip install -r requirements.txt
+```
+
+Run:
+
+```bash
 uvicorn app.main:app --reload
-API: http://127.0.0.1:8000
+```
 
-API docs: http://127.0.0.1:8000/docs
+---
 
-Frontend
-Open another terminal:
+## 3. Frontend
 
+Open a new terminal:
+
+```bash
 cd frontend
 npm install
 npm run dev
-Open the Vite development URL displayed in the terminal.
+```
 
-🔑 Environment Variables
-Create .env from .env.example:
+---
 
-APP_ENV=development
-DATABASE_URL=postgresql://postgres:password@localhost:5432/resqai
-LLM_API_KEY=your_api_key_here
-WEATHER_API_KEY=your_api_key_here
-MAP_API_KEY=your_api_key_here
-Never commit real API keys to GitHub.
+# 🔑 Environment Variables
 
-🧪 Testing
+Create a `.env` file based on `.env.example`.
+
+```env
+DATABASE_URL=
+LLM_API_KEY=
+WEATHER_API_KEY=
+MAP_API_KEY=
+```
+
+⚠️ **Never commit real API keys to GitHub.**
+
+---
+
+# 🧪 Testing
+
+Backend:
+
+```bash
 pytest
-Frontend build:
+```
 
+Frontend:
+
+```bash
 npm run build
-🌐 Deployment Architecture
-Frontend → Vercel / Static Hosting
-Backend  → Cloud Container / API Hosting
-Database → Managed PostgreSQL + PostGIS
-AI       → Hosted or self-hosted inference
-Storage  → Object storage
-For the hackathon, a simpler deployment can be used first and expanded later.
+```
 
-📚 Research & Data References
-Potential implementation sources include:
+---
 
-National disaster-management guidance
+# 🗺️ Roadmap
 
-Government emergency-response procedures
+### Phase 1 — Prototype
 
-Sentinel satellite data
+* [x] Concept
+* [x] System architecture
+* [x] UI prototype
+* [x] Disaster-response workflow
 
-Weather and forecast APIs
+### Phase 2 — Intelligence
 
-OpenStreetMap geographic data
+* [ ] Live satellite pipeline
+* [ ] Advanced computer vision
+* [ ] Dynamic geospatial risk engine
+* [ ] RAG knowledge system
 
-Open geospatial datasets
+### Phase 3 — Operations
 
-Historical disaster datasets
+* [ ] Multi-agency coordination
+* [ ] Responder mobile interface
+* [ ] Offline-first capabilities
+* [ ] Real-time field updates
 
-Research literature on disaster-management AI
+### Phase 4 — Expansion
 
-Computer-vision change-detection research
+* [ ] Flood
+* [ ] Cyclone
+* [ ] Earthquake
+* [ ] Landslide
+* [ ] Wildfire
+* [ ] Urban emergencies
 
-Use the exact documentation and licensing terms for every dataset/API integrated into the final implementation.
+---
 
-👥 Team TechMinds
-Member	Role
-Salonika Tiwari	Team Member
-Shreya Pal	Team Member
-Rajni Pal	Team Member
-Saina Singh	Team Member
-College: Maharana Pratap Engineering College, Kanpur
-Hackathon: Build with Bharat 2.0 — National Level Hackathon
+# 📈 Measuring Impact
 
-🏆 Vision
-From Data to Decisions. From Response to Resilience.
+Rather than using unverified claims, ResQAI can eventually be evaluated using measurable indicators such as:
 
-ResQAI aims to make emergency response faster, safer, more coordinated and more intelligence-driven by putting the right information and recommendations in front of responders when every second matters.
+* Response prioritization time
+* Incident verification time
+* Route planning time
+* Resource allocation efficiency
+* Report classification quality
+* False-positive rate
+* Recommendation confidence
+* Human acceptance rate
 
-⭐ Project Links
-GitHub: https://github.com/shreya-hub423/ResQAI
+---
 
-Live Demo: Add your deployed URL here
+# 📸 Project Preview
 
-Demo Video: Add your video URL here
+<p align="center">
+  <img src="docs/resqai-cover.png" alt="ResQAI Project Preview" width="95%">
+</p>
 
-Presentation: Add your PPT/PDF URL here
+---
 
-📄 License
-This is a hackathon/prototype project. Add an appropriate open-source license before distributing the implementation publicly.
+# 👥 Team TechMinds
 
-<p align="center"><b>ResQAI</b><br>AI Disaster Response Copilot<br><br><i>Smarter AI. Faster Response. Safer Lives.</i></p>
+| Member              |
+| ------------------- |
+| **Salonika Tiwari** |
+| **Shreya Pal**      |
+| **Rajni Pal**       |
+| **Saina Singh**     |
 
+### 🏫 Maharana Pratap Engineering College, Kanpur
 
- 
+### 🏆 Build with भारत 2.0 — National Level Hackathon
+
+---
+
+# 🔗 Project Links
+
+### GitHub
+
+[https://github.com/shreya-hub423/ResQAI](https://github.com/shreya-hub423/ResQAI)
+
+### Live Demo
+
+`Coming Soon`
+
+### Demo Video
+
+`Coming Soon`
+
+### Presentation
+
+`Coming Soon`
+
+---
+
+# 🌱 Future Vision
+
+ResQAI's long-term vision is to become a **unified intelligence layer for emergency response**.
+
+From:
+
+**Data**
+
+to
+
+**Understanding**
+
+to
+
+**Prioritization**
+
+to
+
+**Action**
+
+to
+
+**Resilience**
+
+---
+
+# 🏆 Our Vision
+
+> ## **When disaster strikes, information is everywhere. ResQAI helps turn it into action.**
+
+### **SEE → THINK → PRIORITIZE → ACT**
+
+**ResQAI — AI Disaster Response Copilot**
+
+*Smarter AI. Faster Response. Safer Lives.*

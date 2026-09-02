@@ -1,0 +1,345 @@
+/* =========================================================
+   RESQAI — SAFE ROUTE CARD
+   ========================================================= */
+
+.safe-route-card {
+  padding: 16px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  box-shadow: 0 3px 12px rgba(16, 24, 40, 0.04);
+
+  transition: 0.2s ease;
+}
+
+.safe-route-card:hover {
+  transform: translateY(-2px);
+  border-color: #d7d9e5;
+  box-shadow: 0 8px 22px rgba(16, 24, 40, 0.07);
+}
+
+.safe-route-selected {
+  border-color: #635bff;
+  box-shadow: 0 0 0 2px rgba(99, 91, 255, 0.08);
+}
+
+
+/* HEADER */
+
+.safe-route-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.safe-route-icon {
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+}
+
+.safe-route-icon.safe,
+.safe-route-icon.safest {
+  background: #ecfdf3;
+  color: #15803d;
+}
+
+.safe-route-icon.moderate {
+  background: #fff7e6;
+  color: #d97706;
+}
+
+.safe-route-icon.risky,
+.safe-route-icon.dangerous {
+  background: #fff0f1;
+  color: #dc2626;
+}
+
+.safe-route-title {
+  flex: 1;
+}
+
+.safe-route-title h3 {
+  margin: 0;
+
+  color: #1d2939;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+
+/* SAFETY */
+
+.safe-route-safety {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+
+  margin-top: 4px;
+
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.safe-route-safety.safe,
+.safe-route-safety.safest {
+  color: #15803d;
+}
+
+.safe-route-safety.moderate {
+  color: #b45309;
+}
+
+.safe-route-safety.risky,
+.safe-route-safety.dangerous {
+  color: #dc2626;
+}
+
+
+/* SELECTED */
+
+.route-selected-badge {
+  padding: 4px 7px;
+
+  border-radius: 5px;
+
+  background: #eef2ff;
+  color: #635bff;
+
+  font-size: 8px;
+  font-weight: 700;
+}
+
+
+/* ROUTE PATH */
+
+.safe-route-path {
+  margin-top: 16px;
+  padding-left: 3px;
+}
+
+.route-point {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.route-point > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.route-point small {
+  color: #98a2b3;
+  font-size: 7px;
+  font-weight: 700;
+}
+
+.route-point strong {
+  margin-top: 2px;
+
+  color: #344054;
+  font-size: 9px;
+}
+
+
+/* DOTS */
+
+.route-start-dot,
+.route-end-dot {
+  width: 9px;
+  height: 9px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+}
+
+.route-start-dot {
+  background: #635bff;
+}
+
+.route-end-dot {
+  background: #22c55e;
+}
+
+
+/* LINE */
+
+.route-line {
+  width: 1px;
+  height: 16px;
+
+  margin: 2px 0 2px 4px;
+
+  border-left: 1px dashed #cbd5e1;
+}
+
+
+/* STATS */
+
+.safe-route-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 8px;
+
+  margin-top: 15px;
+}
+
+.safe-route-stats > div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 9px;
+
+  border-radius: 8px;
+
+  background: #f8f9fb;
+
+  color: #635bff;
+}
+
+.safe-route-stats span {
+  display: flex;
+  flex-direction: column;
+}
+
+.safe-route-stats small {
+  color: #98a2b3;
+  font-size: 7px;
+}
+
+.safe-route-stats strong {
+  margin-top: 2px;
+
+  color: #344054;
+  font-size: 9px;
+}
+
+
+/* HAZARDS */
+
+.route-hazards {
+  margin-top: 11px;
+  padding: 9px;
+
+  border-radius: 8px;
+
+  background: #fffaf0;
+}
+
+.route-hazards-title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  color: #b45309;
+
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.route-hazard-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+
+  margin-top: 6px;
+}
+
+.route-hazard-list span {
+  padding: 3px 6px;
+
+  border-radius: 4px;
+
+  background: #fff1d6;
+  color: #92400e;
+
+  font-size: 7px;
+}
+
+
+/* RECOMMENDATION */
+
+.route-recommendation {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+
+  margin-top: 10px;
+  padding: 9px;
+
+  border-radius: 7px;
+
+  background: #f5f6ff;
+
+  color: #635bff;
+
+  font-size: 8px;
+  line-height: 1.4;
+}
+
+.route-recommendation svg {
+  flex-shrink: 0;
+}
+
+
+/* BUTTON */
+
+.safe-route-button {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  margin-top: 12px;
+  padding: 9px;
+
+  border: 0;
+  border-radius: 7px;
+
+  background: #635bff;
+  color: #ffffff;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.safe-route-button:hover {
+  background: #5148e5;
+}
+
+.safe-route-button.selected {
+  background: #16855b;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .safe-route-card {
+    padding: 14px;
+  }
+
+  .safe-route-stats {
+    grid-template-columns: 1fr;
+  }
+}

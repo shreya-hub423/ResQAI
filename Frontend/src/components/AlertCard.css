@@ -1,0 +1,178 @@
+/* =========================================================
+   RESQAI — ALERT CARD
+   ========================================================= */
+
+.alert-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+
+  padding: 13px 14px;
+
+  border: 1px solid #e6e9ef;
+  border-radius: 10px;
+
+  background: #ffffff;
+
+  transition: 0.2s ease;
+}
+
+.alert-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+}
+
+
+/* ICON */
+
+.alert-card-icon {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+}
+
+.alert-critical .alert-card-icon {
+  background: #fff0f1;
+  color: #dc2626;
+}
+
+.alert-warning .alert-card-icon {
+  background: #fff7e6;
+  color: #d97706;
+}
+
+.alert-success .alert-card-icon {
+  background: #ecfdf3;
+  color: #16855b;
+}
+
+.alert-info .alert-card-icon {
+  background: #eef2ff;
+  color: #635bff;
+}
+
+
+/* CONTENT */
+
+.alert-card-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.alert-card-title-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.alert-card-title-row h3 {
+  margin: 0;
+
+  color: #344054;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.alert-unread-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+  background: #ef4444;
+}
+
+
+/* MESSAGE */
+
+.alert-card-message {
+  margin: 5px 0 0;
+
+  color: #667085;
+  font-size: 9px;
+  line-height: 1.45;
+}
+
+
+/* META */
+
+.alert-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  margin-top: 7px;
+}
+
+.alert-card-meta span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  color: #98a2b3;
+  font-size: 8px;
+}
+
+
+/* ACTION */
+
+.alert-card-action {
+  width: 28px;
+  height: 28px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+
+  background: #ffffff;
+  color: #667085;
+
+  cursor: pointer;
+}
+
+.alert-card-action:hover {
+  background: #f5f6ff;
+  color: #635bff;
+}
+
+
+/* READ */
+
+.alert-read {
+  opacity: 0.72;
+}
+
+.alert-read .alert-unread-dot {
+  display: none;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .alert-card {
+    padding: 11px;
+  }
+
+  .alert-card-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .alert-card-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}

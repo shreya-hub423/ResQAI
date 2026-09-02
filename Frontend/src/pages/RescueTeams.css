@@ -1,0 +1,589 @@
+/* =========================================================
+   RESQAI — RESCUE TEAMS
+   Clean + Readable Emergency Operations UI
+   ========================================================= */
+
+.teams-page {
+  max-width: 1500px;
+  margin: auto;
+  padding: 30px 34px 45px;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.teams-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+}
+
+.teams-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #667085;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.teams-eyebrow span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #16a36d;
+}
+
+.teams-header h1 {
+  margin: 8px 0 0;
+  color: #172033;
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.teams-header p {
+  margin: 8px 0 0;
+  color: #667085;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.deploy-team-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #172033;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.deploy-team-btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+
+/* =========================================================
+   SUMMARY
+   ========================================================= */
+
+.team-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.team-summary-card {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 17px;
+  background: white;
+  border: 1px solid #e5e9f0;
+  border-radius: 12px;
+}
+
+.summary-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.summary-icon.total {
+  color: #635bff;
+  background: #eef0ff;
+}
+
+.summary-icon.deployed {
+  color: #1677b8;
+  background: #eff8ff;
+}
+
+.summary-icon.available {
+  color: #16855b;
+  background: #ecfdf3;
+}
+
+.summary-icon.critical {
+  color: #dc2626;
+  background: #fff1f2;
+}
+
+.team-summary-card strong {
+  display: block;
+  color: #172033;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.team-summary-card span {
+  display: block;
+  margin-top: 4px;
+  color: #667085;
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   TOOLBAR
+   ========================================================= */
+
+.teams-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.teams-toolbar h2 {
+  margin: 0;
+  color: #172033;
+  font-size: 17px;
+  font-weight: 750;
+}
+
+.teams-toolbar p {
+  margin: 5px 0 0;
+  color: #667085;
+  font-size: 12px;
+}
+
+.teams-controls {
+  display: flex;
+  gap: 9px;
+}
+
+.team-search {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: 190px;
+  padding: 9px 11px;
+  border: 1px solid #dfe4eb;
+  border-radius: 8px;
+  background: white;
+  color: #98a2b3;
+}
+
+.team-search input {
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #667085;
+  font-size: 12px;
+}
+
+.team-search input::placeholder {
+  color: #98a2b3;
+}
+
+.teams-controls select {
+  padding: 9px 12px;
+  border: 1px solid #dfe4eb;
+  border-radius: 8px;
+  background: white;
+  color: #667085;
+  font-size: 12px;
+  outline: none;
+}
+
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.teams-card {
+  overflow: hidden;
+  background: white;
+  border: 1px solid #e5e9f0;
+  border-radius: 12px;
+}
+
+.teams-table-header,
+.team-row {
+  display: grid;
+  grid-template-columns: 2fr 1.6fr 1.2fr 1.1fr 0.8fr 0.65fr;
+  align-items: center;
+}
+
+.teams-table-header {
+  min-height: 46px;
+  padding: 0 18px;
+  background: #f8fafc;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.teams-table-header span {
+  color: #667085;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+}
+
+.team-row {
+  min-height: 82px;
+  padding: 0 18px;
+  border-bottom: 1px solid #edf0f4;
+  transition: background 0.2s ease;
+}
+
+.team-row:hover {
+  background: #fafbff;
+}
+
+.team-row:last-child {
+  border-bottom: none;
+}
+
+
+/* =========================================================
+   TEAM
+   ========================================================= */
+
+.team-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.team-avatar {
+  width: 39px;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #635bff;
+  background: #eef0ff;
+  border-radius: 9px;
+  flex-shrink: 0;
+}
+
+.team-name-cell strong {
+  display: block;
+  color: #344054;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.team-name-cell span {
+  display: block;
+  margin-top: 4px;
+  color: #98a2b3;
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   MISSION
+   ========================================================= */
+
+.team-mission strong {
+  display: block;
+  color: #475467;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.priority {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 4px 7px;
+  border-radius: 10px;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.priority-critical {
+  color: #b42318;
+  background: #fff1f0;
+}
+
+.priority-high {
+  color: #b54708;
+  background: #fff7ed;
+}
+
+.priority-medium {
+  color: #6941c6;
+  background: #f4f3ff;
+}
+
+.priority-normal {
+  color: #667085;
+  background: #f2f4f7;
+}
+
+
+/* =========================================================
+   LOCATION
+   ========================================================= */
+
+.team-location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #667085;
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.team-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+  padding: 6px 9px;
+  border-radius: 13px;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.status-deployed {
+  color: #635bff;
+  background: #eef0ff;
+}
+
+.status-available {
+  color: #16855b;
+  background: #ecfdf3;
+}
+
+.status-en-route {
+  color: #1677b8;
+  background: #eff8ff;
+}
+
+.status-standby {
+  color: #b54708;
+  background: #fff7ed;
+}
+
+
+/* =========================================================
+   RESPONSE
+   ========================================================= */
+
+.response-time {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #667085;
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   ACTION
+   ========================================================= */
+
+.team-action {
+  padding: 7px 11px;
+  border: 1px solid #dfe4eb;
+  border-radius: 7px;
+  background: white;
+  color: #635bff;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.team-action:hover {
+  background: #f4f3ff;
+  border-color: #c9c5ff;
+}
+
+
+/* =========================================================
+   COMMUNICATION
+   ========================================================= */
+
+.communication-panel {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 20px;
+  padding: 17px;
+  background: #f8f9ff;
+  border: 1px solid #e0e3ff;
+  border-radius: 11px;
+}
+
+.communication-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #635bff;
+  background: #e9eaff;
+  border-radius: 9px;
+  flex-shrink: 0;
+}
+
+.communication-content {
+  flex: 1;
+}
+
+.communication-content strong {
+  color: #344054;
+  font-size: 12px;
+}
+
+.communication-content p {
+  margin: 5px 0 0;
+  color: #667085;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.network-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.network-status > span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #16a36d;
+}
+
+.network-status strong {
+  display: block;
+  color: #16855b;
+  font-size: 10px;
+}
+
+.network-status small {
+  display: block;
+  margin-top: 3px;
+  color: #98a2b3;
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   SAFETY NOTICE
+   ========================================================= */
+
+.team-safety-notice {
+  display: flex;
+  gap: 11px;
+  margin-top: 14px;
+  padding: 15px;
+  border: 1px solid #e5e9f0;
+  border-radius: 10px;
+  color: #667085;
+  background: white;
+}
+
+.team-safety-notice svg {
+  color: #16855b;
+  flex-shrink: 0;
+}
+
+.team-safety-notice strong {
+  color: #344054;
+  font-size: 11px;
+}
+
+.team-safety-notice p {
+  margin: 4px 0 0;
+  color: #667085;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .team-summary {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .teams-card {
+    overflow-x: auto;
+  }
+
+  .teams-table-header,
+  .team-row {
+    min-width: 900px;
+  }
+}
+
+
+@media (max-width: 650px) {
+
+  .teams-page {
+    padding: 20px;
+  }
+
+  .teams-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .teams-header h1 {
+    font-size: 27px;
+  }
+
+  .teams-header p {
+    font-size: 13px;
+  }
+
+  .team-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .teams-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 11px;
+  }
+
+  .teams-controls {
+    width: 100%;
+  }
+
+  .team-search {
+    flex: 1;
+  }
+
+  .communication-panel {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+}
+.teams-header h1 {
+  margin: 8px 0 0;
+  color: #172033;
+  font-size: 35px;
+  line-height: 1.2;
+  font-weight: 800;
+}

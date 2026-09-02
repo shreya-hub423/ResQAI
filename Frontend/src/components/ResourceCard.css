@@ -1,0 +1,240 @@
+/* =========================================================
+   RESQAI — RESOURCE CARD
+   ========================================================= */
+
+.resource-card {
+  padding: 16px;
+
+  border: 1px solid #e6e9ef;
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  box-shadow: 0 3px 12px rgba(16, 24, 40, 0.04);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-2px);
+
+  border-color: #d9dce5;
+
+  box-shadow: 0 8px 22px rgba(16, 24, 40, 0.07);
+}
+
+
+/* TOP */
+
+.resource-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* ICON */
+
+.resource-card-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #eef2ff;
+  color: #635bff;
+}
+
+
+/* STATUS */
+
+.resource-status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 4px 7px;
+
+  border-radius: 5px;
+
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.resource-status-dot {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+}
+
+.resource-status.available {
+  background: #ecfdf3;
+  color: #15803d;
+}
+
+.resource-status.available .resource-status-dot {
+  background: #22c55e;
+}
+
+.resource-status.limited {
+  background: #fff7e6;
+  color: #b45309;
+}
+
+.resource-status.limited .resource-status-dot {
+  background: #f59e0b;
+}
+
+.resource-status.unavailable {
+  background: #fff0f1;
+  color: #dc2626;
+}
+
+.resource-status.unavailable .resource-status-dot {
+  background: #ef4444;
+}
+
+
+/* NAME */
+
+.resource-card-name {
+  margin: 13px 0 0;
+
+  color: #1d2939;
+
+  font-size: 13px;
+  font-weight: 750;
+}
+
+
+/* DESCRIPTION */
+
+.resource-card-description {
+  margin: 4px 0 0;
+
+  color: #667085;
+
+  font-size: 9px;
+  line-height: 1.4;
+}
+
+
+/* COUNT */
+
+.resource-card-count {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-top: 14px;
+}
+
+.resource-card-count strong {
+  color: #172033;
+
+  font-size: 25px;
+  line-height: 1;
+
+  font-weight: 800;
+}
+
+.resource-card-count span {
+  color: #98a2b3;
+
+  font-size: 11px;
+}
+
+.resource-card-count small {
+  color: #98a2b3;
+
+  font-size: 8px;
+}
+
+
+/* PROGRESS */
+
+.resource-progress-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-top: 11px;
+}
+
+.resource-progress {
+  flex: 1;
+
+  height: 5px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #eef0f4;
+}
+
+.resource-progress-fill {
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: #635bff;
+
+  transition: width 0.4s ease;
+}
+
+.resource-progress-wrapper > span {
+  min-width: 25px;
+
+  color: #667085;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  text-align: right;
+}
+
+
+/* LIMITED */
+
+.resource-limited .resource-card-icon {
+  background: #fff7e6;
+  color: #d97706;
+}
+
+.resource-limited .resource-progress-fill {
+  background: #f59e0b;
+}
+
+
+/* UNAVAILABLE */
+
+.resource-unavailable .resource-card-icon {
+  background: #fff0f1;
+  color: #dc2626;
+}
+
+.resource-unavailable .resource-progress-fill {
+  background: #ef4444;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .resource-card {
+    padding: 14px;
+  }
+
+  .resource-card-count strong {
+    font-size: 22px;
+  }
+}

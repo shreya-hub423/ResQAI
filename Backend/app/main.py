@@ -12,3 +12,8 @@ def home():
 @app.get("/health")
 def health():
     return {"Status": "Backend is running"}
+from app.database.connection import engine
+from app.database.database import Base
+from app.database import models
+
+Base.metadata.create_all(bind=engine)
